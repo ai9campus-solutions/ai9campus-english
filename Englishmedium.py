@@ -57,7 +57,7 @@ st.markdown("""
 # 4. HEADER SECTION
 # ═══════════════════════════════════════════════════════════════
 st.markdown('<div class="main-header">🎓 School Name Smart Tutor</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-header">Telangana State Board (SCERT) - English Medium - Classes 1 to 10</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-header"> Classes 1 to 10 - Powered by AI9Campus</div>', unsafe_allow_html=True)
 
 # ═══════════════════════════════════════════════════════════════
 # 5. SIDEBAR - CURRICULUM INFO & SETTINGS
