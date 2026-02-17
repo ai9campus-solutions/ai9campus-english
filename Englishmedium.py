@@ -109,11 +109,13 @@ with st.sidebar:
 
 # ═══════════════════════════════════════════════════════════════
 # 6. API KEY VERIFICATION
-# ═══════════════════════════════════════════════════════════════
-api_key = os.getenv("GROK_API_KEY")
+# This checks Streamlit Secrets first (for web), then .env (for local)
+api_key = st.secrets.get("GROK_API_KEY") or os.getenv("GROK_API_KEY")
+
 if not api_key:
     st.error("⚠️ **API Key Not Found!**")
-    st.info("Please ensure your `.env` file contains: `GROK-API-KEY=your_api_key_here`")
+    st.info("Local: Add `GROK_API_KEY=your_key` to a .env file.")
+    st.info("Web: Add `GROK_API_KEY = 'your_key'` to App Settings > Secrets.")
     st.stop()
 
 client = Groq(api_key=api_key)
@@ -638,4 +640,5 @@ st.divider()
 
 st.caption("🎓 Powered by AI9Campus | Telangana State Board (SCERT) English Medium Curriculum 2025-26")
 st.caption("⚠️ Always cross-verify important information with your textbook and teacher")
+
 
