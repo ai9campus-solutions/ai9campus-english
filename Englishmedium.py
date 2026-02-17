@@ -110,7 +110,7 @@ with st.sidebar:
 # ═══════════════════════════════════════════════════════════════
 # 6. API KEY VERIFICATION
 # ═══════════════════════════════════════════════════════════════
-api_key = os.getenv("GROK-API-KEY")
+api_key = os.getenv("GROK_API_KEY")
 if not api_key:
     st.error("⚠️ **API Key Not Found!**")
     st.info("Please ensure your `.env` file contains: `GROK-API-KEY=your_api_key_here`")
@@ -638,3 +638,4 @@ st.divider()
 
 st.caption("🎓 Powered by AI9Campus | Telangana State Board (SCERT) English Medium Curriculum 2025-26")
 st.caption("⚠️ Always cross-verify important information with your textbook and teacher")
+
