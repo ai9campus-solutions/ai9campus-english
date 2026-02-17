@@ -596,9 +596,9 @@ if prompt:
         try:
             # Create streaming request
             stream = client.chat.completions.create(
-                model="moonshotai/kimi-k2-instruct-0905",
+                model="llama-3.3-70b-versatile", 
                 messages=st.session_state.message,
-                max_completion_tokens=4096,
+                max_tokens=4096,
                 temperature=0.6,
                 top_p=0.9,
                 stream=True
@@ -640,5 +640,6 @@ st.divider()
 
 st.caption("🎓 Powered by AI9Campus | Telangana State Board (SCERT) English Medium Curriculum 2025-26")
 st.caption("⚠️ Always cross-verify important information with your textbook and teacher")
+
 
 
